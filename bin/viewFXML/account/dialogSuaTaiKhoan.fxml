@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="342.0" prefWidth="535.0" style="-fx-background-color: Black;" stylesheets="@../../css/Maintenance.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllerFXML.account.dialogSuaTaiKhoanController">
+   <children>
+      <StackPane layoutX="253.0" layoutY="22.0" prefHeight="53.0" prefWidth="192.0" style="-fx-background-color: Orange; -fx-background-radius: 10;">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tài khoản" wrappingWidth="179.23828125">
+               <font>
+                  <Font name="Arial Bold" size="37.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets bottom="5.0" left="10.0" right="7.0" top="5.0" />
+               </StackPane.margin>
+            </Text>
+         </children>
+      </StackPane>
+      <AnchorPane layoutX="15.0" layoutY="93.0" prefHeight="232.0" prefWidth="505.0" style="-fx-background-color: Orange;">
+         <children>
+            <VBox layoutX="179.0" layoutY="20.0" prefHeight="203.0" prefWidth="308.0" spacing="25.0">
+               <children>
+                  <JFXTextField fx:id="txtTenTaiKhoan" prefWidth="200.0" styleClass="textSearch-fieldInfor" unFocusColor="BLACK">
+                     <focusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="RED" />
+                              <Stop color="BLACK" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </focusColor>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtGmail" prefWidth="200.0" styleClass="textSearch-fieldInfor" unFocusColor="BLACK">
+                     <focusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="RED" />
+                              <Stop color="BLACK" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </focusColor>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtMaNhanVien" disable="true" labelFloat="true" prefWidth="200.0" styleClass="textSearch-fieldInfor" unFocusColor="BLACK">
+                     <focusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="RED" />
+                              <Stop color="BLACK" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </focusColor>
+                     <VBox.margin>
+                        <Insets top="7.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+               </children>
+            </VBox>
+            <VBox layoutX="56.0" layoutY="24.0" spacing="40.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tên tài khoản">
+                     <font>
+                        <Font name="Arrows2" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Gmail">
+                     <font>
+                        <Font name="Arrows2" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mã Nhân viên">
+                     <font>
+                        <Font name="Arrows2" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+            <HBox layoutX="201.0" layoutY="182.0" spacing="5.0">
+               <children>
+                  <JFXButton contentDisplay="RIGHT" onAction="#clearTextAction" prefHeight="34.0" prefWidth="107.0" ripplerFill="#ffe100" style="-fx-border-color: black; -fx-border-radius: 50; -fx-background-radius: 50;" styleClass="jfx-buttondashBoard" text="Làm mới">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Home/icons8_clear_formatting_96px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" onAction="#capNhatTaiKhoan" prefHeight="35.0" prefWidth="116.0" style="-fx-background-color: Black; -fx-background-radius: 50;" styleClass="jfx-buttonSearch" text="Cập nhật" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Home/icons8_update_tag_filled_80px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <VBox layoutX="11.0" layoutY="8.0" spacing="20.0">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/Account/icons8_user_48px.png" />
+                     </image>
+                     <effect>
+                        <DropShadow height="5.0" radius="2.0" spread="0.37" width="5.0" />
+                     </effect>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/Account/icons8_gmail_48px.png" />
+                     </image>
+                     <effect>
+                        <DropShadow height="5.0" radius="2.0" spread="0.37" width="5.0" />
+                     </effect>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/Account/icons8_identity_theft_48px.png" />
+                     </image>
+                     <effect>
+                        <DropShadow height="5.0" radius="2.0" spread="0.37" width="5.0" />
+                     </effect>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <FontAwesomeIconView fill="RED" glyphName="CLOSE" layoutX="494.0" layoutY="36.0" onMouseClicked="#closeDialog" size="100">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <ImageView fitHeight="166.0" fitWidth="208.0" layoutX="-47.0" layoutY="253.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/Home/green8.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="77.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cập nhật">
+         <font>
+            <Font name="Arial Bold" size="37.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+   </children>
+   <effect>
+      <DropShadow color="#0066e3" height="5.0" radius="2.0" spread="0.69" width="5.0" />
+   </effect>
+</AnchorPane>

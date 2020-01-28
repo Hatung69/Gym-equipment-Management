@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="566.0" prefWidth="427.0" style="-fx-background-color: orange; -fx-background-radius: 10;" stylesheets="@../../css/LoginFrom.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllerFXML.login.ForgotController">
+	<children>
+		<ImageView fx:id="imageLogo" fitHeight="249.0" fitWidth="226.0" layoutX="82.0" layoutY="-104.0" onMouseDragged="#dragged" onMousePressed="#pressed" onMouseReleased="#resetOpacity" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../../Images/LogoMain.png" />
+			</image>
+		</ImageView>
+      <AnchorPane fx:id="paneGmail" layoutX="35.0" layoutY="224.0" prefHeight="141.0" prefWidth="358.0" style="-fx-background-color: black; -fx-background-radius: 10;">
+         <effect>
+            <DropShadow radius="7.25" width="10.0" />
+         </effect>
+         <children>
+            <ImageView fitHeight="47.0" fitWidth="59.0" layoutX="21.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/Login/icons8_filled_message_96px.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="txtGmail" focusColor="WHITE" labelFloat="true" layoutX="77.0" layoutY="83.0" prefHeight="31.0" prefWidth="201.0" promptText="Nhập gmail đế lấy Mã" styleClass="jfx-text-field" unFocusColor="ORANGE" />
+            <Text fill="GOLD" layoutX="15.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gmail">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="77.0" fitWidth="150.0" layoutX="218.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/Home/green1.png" />
+               </image>
+            </ImageView>
+            <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="282.0" layoutY="85.0" onAction="#guiMailAction" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: Orange; -fx-text-fill: Black;" styleClass="jfx-button" text="OK">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <FontAwesomeIconView glyphName="SEND" size="20" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+		<AnchorPane fx:id="paneMaXN" layoutX="35.0" layoutY="224.0" prefHeight="141.0" prefWidth="358.0" style="-fx-background-radius: 10; -fx-background-color: Black;" visible="false">
+			<effect>
+				<DropShadow radius="7.25" width="10.0" />
+			</effect>
+			<children>
+				<ImageView fitHeight="47.0" fitWidth="59.0" layoutX="20.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../../Images/Login/icons8_code_96px.png" />
+					</image>
+				</ImageView>
+				<JFXTextField fx:id="txtCodeXacNhan" focusColor="WHITE" labelFloat="true" layoutX="76.0" layoutY="83.0" prefHeight="31.0" prefWidth="201.0" promptText="Nhập mã xác nhận" styleClass="jfx-text-field" unFocusColor="ORANGE" />
+				<Text fill="GOLD" layoutX="14.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã xác nhận">
+					<font>
+						<Font name="System Bold" size="14.0" />
+					</font>
+				</Text>
+            <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="282.0" layoutY="84.0" onAction="#xacNhanCodeAction" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: Orange; -fx-text-fill: Black;" styleClass="jfx-button" text="OK">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <FontAwesomeIconView glyphName="SPINNER" size="20" />
+               </graphic>
+            </JFXButton>
+            <ImageView fitHeight="77.0" fitWidth="150.0" layoutX="218.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/Home/green1.png" />
+               </image>
+            </ImageView>
+			</children>
+		</AnchorPane>
+      <AnchorPane fx:id="paneMatKhau" layoutX="35.0" layoutY="225.0" prefHeight="244.0" prefWidth="358.0" style="-fx-background-color: black; -fx-background-radius: 10;" visible="false">
+         <effect>
+            <DropShadow radius="7.25" width="10.0" />
+         </effect>
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="47.0" layoutX="24.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/Login/icons8_password1_96px.png" />
+               </image>
+            </ImageView>
+            <Text fill="GOLD" layoutX="14.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mật khẩu mới">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <JFXCheckBox fx:id="checkBox" checkedColor="ORANGERED" focusTraversable="false" layoutX="240.0" layoutY="84.0" text="Hiện mật khẩu" textFill="GOLD" unCheckedColor="WHITE" />
+            <StackPane layoutX="76.0" layoutY="78.0">
+               <children>
+                  <JFXPasswordField fx:id="txtPassword" focusColor="WHITE" labelFloat="true" prefHeight="25.0" prefWidth="150.0" promptText="Nhập mật khẩu mới" unFocusColor="ORANGE" />
+                  <JFXTextField fx:id="txtPasswordShow" focusColor="WHITE" focusTraversable="false" labelFloat="true" prefHeight="25.0" prefWidth="150.0" promptText="Nhập mật khẩu mới" styleClass="jfx-text-field" unFocusColor="ORANGE" visible="false" />
+               </children>
+            </StackPane>
+            <ImageView fitHeight="40.0" fitWidth="47.0" layoutX="25.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/Login/icons8_password1_96px.png" />
+               </image>
+            </ImageView>
+            <Text fill="GOLD" layoutX="15.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Xác nhận lại ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <JFXCheckBox fx:id="checkBox1" checkedColor="ORANGERED" focusTraversable="false" layoutX="241.0" layoutY="191.0" text="Hiện mật khẩu" textFill="GOLD" unCheckedColor="WHITE" />
+            <StackPane layoutX="77.0" layoutY="185.0">
+               <children>
+                  <JFXPasswordField fx:id="txtPassword1" focusColor="WHITE" labelFloat="true" prefHeight="25.0" prefWidth="150.0" promptText="Nhập lại mật khẩu mới" unFocusColor="ORANGE" />
+                  <JFXTextField fx:id="txtPasswordShow1" focusColor="WHITE" focusTraversable="false" labelFloat="true" prefHeight="25.0" prefWidth="150.0" promptText="Nhập lại mật khẩu mới" styleClass="jfx-text-field" unFocusColor="ORANGE" visible="false" />
+               </children>
+            </StackPane>
+            <ImageView fitHeight="77.0" fitWidth="150.0" layoutX="217.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/Home/green1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+		<JFXButton fx:id="btnXacNhan" contentDisplay="RIGHT" disable="true" layoutX="35.0" layoutY="486.0" onAction="#confirmAction" prefHeight="57.0" prefWidth="142.0" ripplerFill="#ffffffbb" styleClass="jfx-button" text="Xác nhận" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="20.0" />
+			</font>
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+			<graphic>
+				<FontAwesomeIconView fill="ORANGE" glyphName="HAND_PEACE_ALT" size="25" />
+			</graphic>
+		</JFXButton>
+		<Label fx:id="exit" alignment="CENTER" focusTraversable="false" layoutX="393.0" layoutY="3.0" onMouseClicked="#exitAction" prefHeight="26.0" prefWidth="28.0" style="-fx-background-radius: 20;" styleClass="close-btn">
+			<graphic>
+				<FontAwesomeIconView fill="RED" glyphName="CLOSE" size="25" styleClass="close-btn">
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" spread="0.8" width="5.0" />
+               </effect></FontAwesomeIconView>
+			</graphic>
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+		</Label>
+		<Label fx:id="minus" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="358.0" layoutY="3.0" onMouseClicked="#minusAction" prefHeight="26.0" prefWidth="28.0" style="-fx-background-radius: 20;" styleClass="minus-btn">
+			<graphic>
+				<FontAwesomeIconView glyphName="MINUS" size="25" styleClass="minus-btn" text="">
+               <effect>
+                  <DropShadow color="WHITE" height="5.0" radius="2.0" spread="0.8" width="5.0" />
+               </effect></FontAwesomeIconView>
+			</graphic>
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+		</Label>
+		<JFXButton contentDisplay="RIGHT" layoutX="204.0" layoutY="486.0" onAction="#returnAction" prefHeight="57.0" prefWidth="190.0" ripplerFill="#ffffffbb" styleClass="jfx-button" text="Về đăng nhập" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="20.0" />
+			</font>
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+			<graphic>
+				<FontAwesomeIconView fill="ORANGE" glyphName="HAND_ALT_RIGHT" size="25" />
+			</graphic>
+		</JFXButton>
+		<StackPane layoutX="71.0" layoutY="192.0" style="-fx-background-color: orange; -fx-background-radius: 10;">
+			<children>
+				<Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Quên mật khẩu" textAlignment="CENTER" wrappingWidth="275.40625">
+					<font>
+						<Font name="System Bold" size="38.0" />
+					</font>
+					<StackPane.margin>
+						<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+					</StackPane.margin>
+					<effect>
+						<DropShadow height="5.0" radius="2.0" spread="0.83" width="5.0" />
+					</effect>
+				</Text>
+			</children>
+		</StackPane>
+		<Text fx:id="txtBanner" fontSmoothingType="LCD" layoutX="15.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Để lấy lại Mật khẩu bạn cần có:&#10;                   + Gmai đã được Đăng ký.&#10;                   + Kết nối Internet !" wrappingWidth="406.12353515625">
+			<font>
+				<Font name="Consolas Bold" size="15.0" />
+			</font>
+			<fill>
+				<RadialGradient centerX="0.5055555555555558" centerY="0.6619047619047618" radius="0.5">
+					<stops>
+						<Stop color="WHITE" />
+						<Stop color="WHITE" offset="0.6666666666666666" />
+                  <Stop color="#ff003d" offset="1.0" />
+					</stops>
+				</RadialGradient>
+			</fill>
+         <effect>
+            <DropShadow height="5.0" radius="2.0" spread="0.8" width="5.0" />
+         </effect>
+		</Text>
+	</children>
+	<effect>
+		<DropShadow />
+	</effect>
+</AnchorPane>

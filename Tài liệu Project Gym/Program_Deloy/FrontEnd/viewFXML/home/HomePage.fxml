@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXNodesList?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="mainStackPane" prefHeight="886.0" prefWidth="1849.0" style="-fx-background-color: TRANSPARENT;" stylesheets="@../../css/HomePage.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllerFXML.home.HomePageController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="888.0" prefWidth="1492.0" style="-fx-background-color: TRANSPARENT;">
+         <children>
+            <AnchorPane layoutX="134.0" layoutY="120.0" prefHeight="44.0" prefWidth="865.0" style="-fx-background-color: linear-gradient(to right, #ffa500, #ffa500, #ffa500, #ffa500, #ffa500, #f2901a, #e27d26, #d06b2d, #a14933, #6d2f2e, #381b1f, #000000); -fx-background-radius: 5;">
+               <children>
+                  <JFXHamburger fx:id="hamburger" layoutX="13.0" layoutY="12.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow color="#ff0023" height="5.0" radius="2.0" spread="1.0" width="5.0" />
+                     </effect>
+                  </JFXHamburger>
+                  <AnchorPane layoutX="55.0" prefHeight="44.0" prefWidth="803.0" style="-fx-background-color: Black;">
+                     <children>
+                        <AnchorPane fx:id="titlePane" layoutX="24.0" layoutY="4.0" prefHeight="36.0" prefWidth="381.0">
+                           <children>
+                              <ImageView fitHeight="34.0" fitWidth="71.0" layoutX="-5.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true" rotate="54.5">
+                                 <image>
+                                    <Image url="@../../Images/Home/green10.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="40.0" fitWidth="161.0" layoutX="331.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true" rotate="-28.2">
+                                 <image>
+                                    <Image url="@../../Images/Home/green9.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" focusTraversable="false" layoutX="38.0" prefHeight="36.0" prefWidth="305.0" style="-fx-background-color: Orange; -fx-background-radius: 0 30 0 30;" text="Quản lý Thiết bị phòng Gym">
+                                 <font>
+                                    <Font name="System Bold" size="21.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" spread="0.82" width="5.0" />
+               </effect>
+            </AnchorPane>
+            <AnchorPane layoutX="1348.0" layoutY="120.0" prefHeight="44.0" prefWidth="381.0" style="-fx-background-color: linear-gradient(to right, #000000, #381b1f, #6d2f2e, #a14933, #d06b2d, #e27d26, #f2901a, #ffa500, #ffa500, #ffa500, #ffa500, #ffa500); -fx-background-radius: 5;">
+               <children>
+                  <JFXNodesList alignment="CENTER_LEFT" layoutX="338.0" layoutY="4.0" prefHeight="27.0" prefWidth="28.0" spacing="13.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="34.0" style="-fx-background-radius: 30; -fx-background-color: #ff0023;" styleClass="nodeList-btn">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="CARET_DOWN" size="35" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <InnerShadow choke="1.0" height="5.0" radius="2.0" width="5.0" />
+                           </effect>
+                        </Label>
+                        <JFXButton onAction="#nodetListInforAction" styleClass="jfxNodelist-button" text="Thông tin Phần mềm">
+                           <graphic>
+                              <FontAwesomeIconView fill="#0bdd0b" glyphName="PAGELINES" size="20" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Calibri Bold" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton onAction="#nodetListLogoutAction" styleClass="jfxNodelist-button" text="Đăng xuất">
+                           <graphic>
+                              <FontAwesomeIconView fill="#0060ed" glyphName="SIGN_OUT" size="20" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Calibri Bold" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton onAction="#nodetListExitAction" styleClass="jfxNodelist-button" text="Thoát">
+                           <graphic>
+                              <FontAwesomeIconView fill="RED" glyphName="POWER_OFF" size="20" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Calibri Bold" size="13.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <effect>
+                        <DropShadow height="5.0" radius="2.0" width="5.0" />
+                     </effect>
+                  </JFXNodesList>
+                  <AnchorPane layoutX="15.0" prefHeight="44.0" prefWidth="313.0" style="-fx-background-color: Black;">
+                     <children>
+                        <Label fx:id="lblTenNV" alignment="CENTER" focusTraversable="false" layoutX="48.0" layoutY="4.0" prefHeight="36.0" prefWidth="235.0" style="-fx-background-color: Orange; -fx-background-radius: 5;" text="Nguyễn Thị Kim Bắp">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <effect>
+                        <DropShadow height="5.0" radius="0.75" width="0.0" />
+                     </effect>
+                  </AnchorPane>
+               </children>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" spread="0.82" width="5.0" />
+               </effect>
+            </AnchorPane>
+            <StackPane layoutX="134.0" layoutY="171.0" prefHeight="710.0" prefWidth="330.0" style="-fx-background-radius: 5;">
+               <children>
+                  <ImageView fitHeight="712.0" fitWidth="330.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/Home/ImageNavagation.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <effect>
+                  <DropShadow height="10.0" radius="7.0" width="20.0" />
+               </effect>
+            </StackPane>
+            <HBox alignment="CENTER" layoutX="1642.0" layoutY="84.0" prefHeight="27.0" prefWidth="87.0" spacing="10.0" style="-fx-background-color: Orange; -fx-background-radius: 20 0 20 0;">
+               <children>
+                  <Label fx:id="minus" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" onMouseClicked="#minusAction" prefHeight="26.0" prefWidth="28.0" style="-fx-background-radius: 20;" styleClass="minus-btn">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="MINUS" size="25" styleClass="minus-btn" text="">
+                           <effect>
+                              <DropShadow color="WHITE" height="5.0" radius="2.0" spread="0.8" width="5.0" />
+                           </effect></FontAwesomeIconView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="exit" alignment="CENTER" focusTraversable="false" onMouseClicked="#exitAction" prefHeight="26.0" prefWidth="28.0" style="-fx-background-radius: 20;" styleClass="close-btn">
+                     <graphic>
+                        <FontAwesomeIconView fill="RED" glyphName="CLOSE" size="25" styleClass="close-btn">
+                           <effect>
+                              <DropShadow height="5.0" radius="2.0" spread="0.8" width="5.0" />
+                           </effect></FontAwesomeIconView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" spread="0.73" width="5.0" />
+               </effect>
+            </HBox>
+            <JFXDrawer fx:id="drawer" defaultDrawerSize="690.0" direction="BOTTOM" layoutX="133.0" layoutY="172.0" prefHeight="710.0" prefWidth="330.0">
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" width="5.0" />
+               </effect></JFXDrawer>
+            <StackPane fx:id="stackPaneLoadLayout" layoutX="478.0" layoutY="173.0" prefHeight="707.0" prefWidth="1198.0" style="-fx-background-color: Orange; -fx-background-radius: 5;">
+               <effect>
+                  <DropShadow height="17.03" radius="3.7575000000000003" width="0.0" />
+               </effect>
+               <children>
+                  <AnchorPane fx:id="anchorHomeLayout">
+                     <children>
+                        <Pane layoutX="63.0" layoutY="50.0" prefHeight="615.0" prefWidth="1089.0" style="-fx-background-color: Black; -fx-background-radius: 0 100 0 100;">
+                           <children>
+                              <ImageView fitHeight="615.0" fitWidth="693.0" layoutX="394.0" layoutY="1.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../Images/Home/HomeImage.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="73.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cảm ơn đã sử dụng Phần mềm!">
+                                 <font>
+                                    <Font name="Calibri Bold" size="34.0" />
+                                 </font>
+                                 <fill>
+                                    <LinearGradient endX="0.661904761904762" endY="0.7666666666666666" startY="0.004761904761904762">
+                                       <stops>
+                                          <Stop color="#04ff00" />
+                                          <Stop color="#00eaff" offset="0.5287356321839081" />
+                                          <Stop color="#ff00a6" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Text>
+                              <Label fx:id="lblTenNV2" alignment="CENTER" focusTraversable="false" layoutX="242.0" layoutY="58.0" prefHeight="44.0" prefWidth="250.0" style="-fx-background-color: Orange; -fx-background-radius: 5;" text="Nguyễn Thị Kim Bắp">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Text fill="WHITE" layoutX="134.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Xin chào ">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="325.0" fitWidth="330.0" layoutX="129.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/LogoMain.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow color="ORANGE" height="48.03" radius="22.5" width="43.97" />
+                                 </effect>
+                              </ImageView>
+                              <Text fill="#c9c9c9" layoutX="80.0" layoutY="577.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lý thông tin&#10;Bảo trì thiết bị">
+                                 <font>
+                                    <Font name="Calibri Bold" size="17.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="213.0" fitWidth="316.0" layoutX="-80.0" layoutY="-54.0" pickOnBounds="true" preserveRatio="true" rotate="-24.4">
+                                 <image>
+                                    <Image url="@../../Images/Home/BannerHome.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow color="ORANGE" height="5.0" radius="2.0" spread="0.75" width="5.0" />
+                                 </effect>
+                              </ImageView>
+                              <StackPane layoutX="86.0" layoutY="166.0">
+                                 <children>
+                                    <JFXButton defaultButton="true" onAction="#openQLThietBi" style="-fx-background-color: linear-gradient(to right, #00ff12, #00ff6f, #00ffa3, #00ffcb, #00fee7, #00f4f4, #00e9fc, #00ddff, #00c6ff, #6da4ff, #cb70f6, #ff00a6); -fx-background-radius: 50;" styleClass="jfxBtnBanner" text="Quản lý thiết bị Gym">
+                                       <font>
+                                          <Font name="System Bold" size="36.0" />
+                                       </font>
+                                       <ripplerFill>
+                                          <LinearGradient endX="0.7619047619047619" endY="0.7285714285714286">
+                                             <stops>
+                                                <Stop color="#00ff1e" />
+                                                <Stop color="#00c3ff" offset="0.5546470750878856" />
+                                                <Stop color="#008dff" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </ripplerFill>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <effect>
+                                    <DropShadow color="WHITE" height="5.0" radius="2.0" spread="1.0" width="5.0" />
+                                 </effect>
+                              </StackPane>
+                              <Rectangle arcHeight="20.0" arcWidth="20.0" height="20.0" layoutX="-23.0" layoutY="586.0" stroke="BLACK" strokeType="INSIDE" width="102.0">
+                                 <fill>
+                                    <LinearGradient endX="0.8238095238095238" endY="0.9095238095238095" startX="0.34285714285714286" startY="0.7523809523809524">
+                                       <stops>
+                                          <Stop color="ORANGE" />
+                                          <Stop color="BLACK" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <Rectangle arcHeight="20.0" arcWidth="20.0" height="20.0" layoutX="-24.0" layoutY="559.0" stroke="BLACK" strokeType="INSIDE" width="102.0">
+                                 <fill>
+                                    <LinearGradient endX="0.8238095238095238" endY="0.9095238095238095" startX="0.34285714285714286" startY="0.7523809523809524">
+                                       <stops>
+                                          <Stop color="ORANGE" />
+                                          <Stop color="BLACK" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+                  <StackPane fx:id="stackPaneThietBi" prefHeight="150.0" prefWidth="200.0" style="-fx-background-radius: 5; -fx-background-color: Black;" visible="false" />
+                  <StackPane fx:id="stackPaneBaoTri" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: red; -fx-background-radius: 5;" visible="false" />
+                  <StackPane fx:id="stackPaneThongKe" prefHeight="150.0" prefWidth="200.0" style="-fx-background-radius: 5; -fx-background-color: Green;" visible="false" />
+                  <StackPane fx:id="stackPaneTaiKhoan" prefHeight="150.0" prefWidth="200.0" style="-fx-background-radius: 5; -fx-background-color: Pink;" visible="false" />
+               </children>
+            </StackPane>
+            <ImageView fx:id="imageLogoHome" fitHeight="213.0" fitWidth="315.0" layoutX="1030.0" layoutY="5.0" onMouseDragged="#dragged" onMousePressed="#pressed" onMouseReleased="#resetOpacity" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/Home/LogoFront.png" />
+               </image>
+               <effect>
+                  <DropShadow height="2.5" radius="0.125" spread="0.19" width="0.0" />
+               </effect>
+            </ImageView>
+            <AnchorPane layoutX="979.0" layoutY="120.0" prefHeight="44.0" prefWidth="59.0" style="-fx-background-color: black; -fx-background-radius: 50;">
+               <children>
+                  <Label fx:id="lblHome" alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="2.0" onDragDetected="#backHome" onMouseClicked="#backHome" prefHeight="40.0" prefWidth="40.0" styleClass="lblSttBar-button">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="37">
+                           <effect>
+                              <DropShadow />
+                           </effect></FontAwesomeIconView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow height="10.0" radius="3.25" spread="0.76" width="5.0" />
+               </effect></AnchorPane>
+            <AnchorPane layoutX="1331.0" layoutY="120.0" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: black; -fx-background-radius: 50;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" onMouseClicked="#openTaiKhoan" prefHeight="40.0" prefWidth="40.0" styleClass="lblSttBar-button">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER" size="35" text="">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </FontAwesomeIconView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" spread="0.57" width="5.0" />
+               </effect>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

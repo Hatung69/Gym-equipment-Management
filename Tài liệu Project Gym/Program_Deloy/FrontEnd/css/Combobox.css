@@ -1,0 +1,9 @@
+.combo-box {
+   	-fx-background-color: linear-gradient(to right, #ffa50a, #ff9e05, #ff9802, #ff9100, #ff8a00, #ff8a00, #ff8a00, #ff8a00, #ff9100, #ff9802, #ff9e05, #ffa50a);
+    -fx-text-inner-color: Black;
+    -fx-font-weight: Bold;
+}
+.combo-box :hover{
+	-fx-background-color:Gold;
+	-fx-text-fill: Black;
+}

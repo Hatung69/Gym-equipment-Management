@@ -1,0 +1,15 @@
+/*Button */
+.jfx-button {
+	-fx-background-radius: 7.0;
+     -fx-background-color: Orange;
+     -fx-text-fill: Black;
+}
+.jfx-button:hover {
+	  -fx-text-fill: White;
+	  -fx-scale-x: 1.1;
+}
+.jfx-button:pressed{
+      -fx-scale-x: 1.05;
+        -fx-text-fill: white;
+	-fx-background-radius: 7.0;
+}

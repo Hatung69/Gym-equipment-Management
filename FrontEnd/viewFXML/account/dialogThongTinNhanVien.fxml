@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="469.0" style="-fx-background-color: Black;" stylesheets="@../../css/Maintenance.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllerFXML.account.dialogThongTinNhanVienController">
+   <children>
+      <StackPane layoutX="212.0" layoutY="22.0" prefHeight="53.0" prefWidth="154.0" style="-fx-background-color: Orange; -fx-background-radius: 10;">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nhân viên" wrappingWidth="188.23828125">
+               <font>
+                  <Font name="Arial Bold" size="37.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets bottom="5.0" left="11.0" right="7.0" top="5.0" />
+               </StackPane.margin>
+            </Text>
+         </children>
+      </StackPane>
+      <AnchorPane layoutX="15.0" layoutY="101.0" prefHeight="454.0" prefWidth="439.0" style="-fx-background-color: Orange;">
+         <children>
+            <VBox layoutX="153.0" layoutY="13.0" prefHeight="91.0" prefWidth="270.0" spacing="25.0">
+               <children>
+                  <JFXTextField fx:id="txtMaNhanVien" alignment="CENTER" editable="false" prefWidth="200.0" styleClass="textSearch-fieldInfor" unFocusColor="BLACK">
+                     <focusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="RED" />
+                              <Stop color="BLACK" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </focusColor>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtTenNhanVien" alignment="CENTER" editable="false" prefWidth="200.0" styleClass="textSearch-fieldInfor" unFocusColor="BLACK">
+                     <focusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="RED" />
+                              <Stop color="BLACK" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </focusColor>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtNgaySinh" alignment="CENTER" editable="false" prefWidth="200.0" styleClass="textSearch-fieldInfor" unFocusColor="BLACK">
+                     <focusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="RED" />
+                              <Stop color="BLACK" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </focusColor>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtGioiTinh" alignment="CENTER" editable="false" prefWidth="200.0" styleClass="textSearch-fieldInfor" unFocusColor="BLACK">
+                     <focusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="RED" />
+                              <Stop color="BLACK" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </focusColor>
+                  </JFXTextField>
+               </children>
+            </VBox>
+            <HBox layoutX="61.0" layoutY="415.0" spacing="10.0" />
+            <HBox layoutX="177.0" layoutY="422.0" spacing="5.0" />
+            <JFXTextArea fx:id="txtDiaChi" editable="false" layoutX="152.0" layoutY="245.0" prefHeight="69.0" prefWidth="270.0" styleClass="textSearch-fieldInfor" unFocusColor="BLACK">
+               <focusColor>
+                  <LinearGradient endX="0.6523809523809524" endY="0.5714285714285714">
+                     <stops>
+                        <Stop color="RED" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </focusColor>
+            </JFXTextArea>
+            <JFXTextField fx:id="txtSoDienThoai" alignment="CENTER" editable="false" layoutX="153.0" layoutY="350.0" prefHeight="25.0" prefWidth="270.0" styleClass="textSearch-fieldInfor" unFocusColor="BLACK">
+               <focusColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="RED" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </focusColor>
+            </JFXTextField>
+            <JFXTextField fx:id="txtMaQuyen" alignment="CENTER" editable="false" layoutX="153.0" layoutY="408.0" prefHeight="25.0" prefWidth="270.0" styleClass="textSearch-fieldInfor" unFocusColor="BLACK">
+               <focusColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="RED" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </focusColor>
+            </JFXTextField>
+            <VBox layoutX="28.0" layoutY="17.0" spacing="40.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mã nhân viên">
+                     <font>
+                        <Font name="Arrows2" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tên nhân viên">
+                     <font>
+                        <Font name="Arrows2" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày sinh">
+                     <font>
+                        <Font name="Arrows2" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Giới tính">
+                     <font>
+                        <Font name="Arrows2" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Đia chỉ">
+                     <font>
+                        <Font name="Arrows2" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Số điện thoại">
+                     <font>
+                        <Font name="Arrows2" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mã quyền">
+                     <font>
+                        <Font name="Arrows2" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <FontAwesomeIconView fill="RED" glyphName="CLOSE" layoutX="427.0" layoutY="35.0" onMouseClicked="#closeDialog" size="100">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <Text fill="WHITE" layoutX="35.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin">
+         <font>
+            <Font name="Arial Bold" size="37.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <Rectangle arcHeight="10.0" arcWidth="10.0" height="150.0" layoutX="3.0" layoutY="483.0" rotate="-45.0" stroke="BLACK" strokeType="INSIDE" width="18.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.0761904761904762" startY="0.2142857142857143">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#b200ff" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="10.0" arcWidth="10.0" height="150.0" layoutX="21.0" layoutY="468.0" rotate="-45.0" stroke="BLACK" strokeType="INSIDE" width="18.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.0761904761904762" startY="0.2142857142857143">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#b200ff" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+   </children>
+   <effect>
+      <DropShadow color="#9700ff" height="5.0" radius="2.0" spread="0.79" width="5.0" />
+   </effect>
+</AnchorPane>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="710.0" prefWidth="330.0" style="-fx-background-color: black;" stylesheets="@../../css/DashBoard.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllerFXML.home.dashboardController">
+   <children>
+      <ImageView fitHeight="211.0" fitWidth="169.0" layoutY="499.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/Home/green5.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="13.0" layoutY="634.0" prefHeight="13.0" prefWidth="303.0" style="-fx-background-color: Chocolate; -fx-background-radius: 50;" />
+      <AnchorPane layoutX="13.0" layoutY="598.0" prefHeight="13.0" prefWidth="303.0" style="-fx-background-color: Chocolate; -fx-background-radius: 50;" />
+      <AnchorPane layoutX="14.0" layoutY="13.0" prefHeight="174.0" prefWidth="303.0" style="-fx-background-color: Orange; -fx-background-radius: 5;">
+         <children>
+            <ImageView fitHeight="174.0" fitWidth="169.0" layoutX="69.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/LogoMain.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <Text layoutX="7.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Designed in 2019">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Pane layoutX="278.0" layoutY="3.0" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: Black; -fx-background-radius: 50;" />
+            <Pane layoutX="4.0" layoutY="4.0" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: Black; -fx-background-radius: 50;" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="4.0" layoutY="213.0" prefHeight="61.0" prefWidth="322.0">
+         <children>
+            <JFXButton fx:id="btnThietBi" focusTraversable="false" layoutX="147.0" layoutY="4.0" onAction="#openThietBi" prefHeight="53.0" prefWidth="161.0" ripplerFill="#00000022" text="Thiết bị">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="51.0" fitWidth="42.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/DashBoard/icons8_barbell_filled_100px_1.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="71.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Xem">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="4.0" layoutY="287.0" prefHeight="61.0" prefWidth="322.0">
+         <children>
+            <JFXButton focusTraversable="false" layoutX="147.0" layoutY="4.0" onAction="#openBaoTri" prefHeight="53.0" prefWidth="161.0" ripplerFill="#00000022" text="Bảo trì">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="42.0" fitWidth="39.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/DashBoard/icons8_maintenance_filled_100px_1.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="71.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Xem">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="4.0" layoutY="361.0" prefHeight="61.0" prefWidth="322.0">
+         <children>
+            <JFXButton focusTraversable="false" layoutX="147.0" layoutY="4.0" onAction="#openthongKe" prefHeight="53.0" prefWidth="161.0" ripplerFill="#00000022" text="Thống kê">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="51.0" fitWidth="42.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/DashBoard/icons8_statistics_filled_100px_1.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="71.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Xem">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="4.0" layoutY="435.0" prefHeight="61.0" prefWidth="322.0">
+         <children>
+            <JFXButton focusTraversable="false" layoutX="147.0" layoutY="4.0" onAction="#openTaiKhoan" prefHeight="53.0" prefWidth="161.0" ripplerFill="#00000022" text="Tài khoản">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="51.0" fitWidth="42.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/DashBoard/icons8_bank_card_missing_filled_100px_1.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="71.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Xem">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="51.0" layoutY="567.0" prefHeight="123.0" prefWidth="62.0" style="-fx-background-color: Gold; -fx-background-radius: 15;">
+         <children>
+            <Label fx:id="hour" layoutX="11.0" layoutY="29.0" text="00">
+               <font>
+                  <Font name="Bernard MT Condensed" size="42.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.3190476190476191" endY="0.6571428571428571" startX="0.16190476190476188" startY="0.2857142857142857">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#ff0042" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Pane layoutX="21.0" layoutY="2.0" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: Black; -fx-background-radius: 50;" />
+            <Text layoutX="11.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giờ">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="133.0" layoutY="567.0" prefHeight="123.0" prefWidth="62.0" style="-fx-background-color: Gold; -fx-background-radius: 15;">
+         <children>
+            <Label fx:id="minute" layoutX="9.0" layoutY="29.0" text="00">
+               <font>
+                  <Font name="Bernard MT Condensed" size="42.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.3190476190476191" endY="0.6571428571428571" startX="0.16190476190476188" startY="0.2857142857142857">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#ff0042" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Pane layoutX="19.0" layoutY="2.0" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: Black; -fx-background-radius: 50;" />
+            <Text layoutX="4.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phút">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="214.0" layoutY="567.0" prefHeight="123.0" prefWidth="62.0" style="-fx-background-color: Gold; -fx-background-radius: 15;">
+         <children>
+            <Label fx:id="seconds" layoutX="10.0" layoutY="29.0" text="00">
+               <font>
+                  <Font name="Bernard MT Condensed" size="42.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.3190476190476191" endY="0.6571428571428571" startX="0.16190476190476188" startY="0.2857142857142857">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#ff0042" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Pane layoutX="21.0" layoutY="2.0" prefHeight="21.0" prefWidth="21.0" style="-fx-background-color: Black; -fx-background-radius: 50;" />
+            <Text layoutX="6.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giây">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

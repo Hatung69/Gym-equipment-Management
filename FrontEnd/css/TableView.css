@@ -1,0 +1,21 @@
+.table-view .column-header-background .label{
+	  -fx-padding: 0.4em;
+    -fx-text-fill: Black;
+    -fx-font-weight: bold;
+    -fx-font-size: 13.5px;
+}
+.table-view .table-column {
+  -fx-alignment: CENTER;
+}
+.table-view :hover{
+	-fx-background-color:Gold;
+}
+.table-view .table-cell{
+    -fx-text-fill: Black;
+    -fx-font-family: "Arrows1";
+}
+.table-row-cell:selected {
+    -fx-background-color: Orange;
+    -fx-background-insets: 0.0;
+    -fx-background-radius: 5.0;
+}

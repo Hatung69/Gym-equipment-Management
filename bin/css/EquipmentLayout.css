@@ -1,0 +1,114 @@
+/*Tab pane  */
+.specialJFXTabPane .tab-header-area .tab-header-background {
+    -fx-background-color:Black !important;  	    
+}
+.specialJFXTabPane .tab-header-area .jfx-rippler{
+    -fx-cursor:hand;
+}
+.specialJFXTabPane .tab-header-area  .tab-selected-line{
+     -fx-stroke: firebrick !important;
+}
+.specialJFXTabPane .tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: White;
+    -fx-font-size: 15.0px; /* before it was 12px */
+    -fx-font-weight: bold;
+    -fx-wrap-text: true;
+    -fx-cursor:hand;
+}
+.specialJFXTabPane .tab:hover .tab-label{
+	-fx-text-fill:White;
+	-fx-background-color:rgb(248.0,134.0,7.0);	
+	-fx-background-radius: 0.0;
+}
+.specialJFXTabPane .tab:selected .tab-label{
+	-fx-background-color:Orange;
+	 -fx-text-fill: Black;
+}
+.specialJFXTabPane .tab-selected-line
+{
+-fx-border-color: rgb(217.0,108.0,0.0);
+}
+
+/* JFX TextFiledSearch */
+.textSearch-fieldSearch{
+    -fx-prompt-text-fill: linear-gradient(to right, #000000, #3d101c, #770c26, #b30025, #eb1212);
+    -fx-text-inner-color: linear-gradient(to right, #000000, #3d101c, #770c26, #b30025, #eb1212);
+    -fx-font-size: 16.0;
+    -fx-font-weight: Bold;
+    }
+/*Button Search*/
+.jfx-buttonSearch {
+	-fx-background-radius: 5.0;
+     -fx-background-color: Black;
+       -fx-text-fill: Orange;
+}
+.jfx-buttonSearch:hover {
+	  -fx-text-fill: White;
+	    -fx-scale-x: 1.025; 
+	    -fx-scale-y: 1.025; 
+}
+.jfx-buttonSearch:pressed{
+	-fx-scale-y: 0.95;
+      -fx-scale-x: 0.95;
+        -fx-text-fill: White;
+	-fx-background-radius: 5.0;
+}
+/*Button open Dialog*/
+.jfx-buttonopenDialog {
+	-fx-background-radius: 50.0;
+     -fx-background-color: Black;
+     -fx-text-fill: White;
+}
+.jfx-buttonopenDialog:hover {
+	  -fx-text-fill: Orange;
+	   -fx-scale-x: 1.05; 
+	    -fx-scale-y: 1.05; 
+}
+.jfx-buttonopenDialog:pressed{
+	-fx-scale-y: 0.9;
+      -fx-scale-x: 0.9;
+        -fx-text-fill: White;
+	-fx-background-radius: 50.0;
+}
+/*Button Dialog*/
+.jfx-buttonDialog {
+	-fx-background-radius: 5.0;
+     -fx-background-color: Black;
+     -fx-text-fill: White;
+}
+.jfx-buttonDialog:hover {
+	  -fx-text-fill: Orange;
+	  
+}
+.jfx-buttonDialog:pressed{
+      -fx-scale-x: 0.95; 
+        -fx-text-fill: White;
+	-fx-background-radius: 5.0;
+}
+
+/*Button dashBoard*/
+.jfx-buttondashBoard {
+	-fx-background-radius: 5.0;
+     -fx-background-color: Orange;
+     -fx-text-fill: Black;
+}
+.jfx-buttondashBoard:hover {
+	  -fx-text-fill: DarkRed;
+	  -fx-scale-y: 1.025;
+      -fx-scale-x: 1.025;
+}
+.jfx-buttondashBoard:pressed{
+	-fx-scale-y: 0.98;
+      -fx-scale-x: 0.98;
+        -fx-text-fill: White;
+	-fx-background-radius: 5.0;
+}
+
+/* JFX TextFiledInfor */
+.textSearch-fieldInfor{
+	-fx-background-color:  linear-gradient(to right, #ffa50a, #ff9e05, #ff9802, #ff9100, #ff8a00, #ff8a00, #ff8a00, #ff8a00, #ff9100, #ff9802, #ff9e05, #ffa50a);
+    -fx-text-inner-color: Black;
+    -fx-font-size: 13.0;
+    -fx-font-weight: Bold;
+    }

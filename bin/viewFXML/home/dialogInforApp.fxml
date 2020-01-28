@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="705.0" style="-fx-background-color: Orange;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#2696ff00" height="456.0" layoutX="-6.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" width="705.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-73.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true" rotate="179.5">
+         <image>
+            <Image url="@../../Images/Home/green8.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="172.0" fitWidth="185.0" layoutX="117.0" layoutY="-56.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/LogoMain.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="572.0" fitWidth="540.0" layoutX="374.0" layoutY="-60.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../Images/Home/logoInfor.png" />
+         </image>
+         <effect>
+            <DropShadow height="5.0" radius="2.0" width="5.0" />
+         </effect>
+      </ImageView>
+      <Text layoutX="83.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin phần mềm">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="48.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phiên bản : v1.0&#10;Người thực hiện : Hà Việt Tùng&#10;Ngôn ngữ : Java&#10;Thư viện : JavaFX&#10;Công cụ hỗ trợ: Eclipse, Scene Builder&#10;Cơ sở dữ liệu cung cấp bởi : Microsoft SQl Server.&#10;&#10;&#10;Operating System&#10;Windows 10, amd64, 10.0&#10;&#10;Copyright © by HaTung69 2019, Java.">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="0.7761904761904762" startX="0.22857142857142856" startY="0.37142857142857144">
+               <stops>
+                  <Stop color="#140909" />
+                  <Stop color="RED" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <Text layoutX="123.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin liên lạc :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Hyperlink layoutX="235.0" layoutY="409.0" text="Keodeo19@gmail.com" textFill="#0046ff">
+         <font>
+            <Font name="Consolas Bold" size="16.0" />
+         </font>
+      </Hyperlink>
+      <Text layoutX="48.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phần mềm Quản lý thiết bị phòng Gym">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="RED" />
+                  <Stop color="BLACK" offset="0.9961685823754789" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+   </children>
+</AnchorPane>

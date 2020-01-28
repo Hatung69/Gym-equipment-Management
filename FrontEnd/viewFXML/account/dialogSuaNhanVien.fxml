@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="475.0" style="-fx-background-color: Black;" stylesheets="@../../css/Maintenance.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllerFXML.account.dialogSuaNhanVienController">
+   <children>
+      <StackPane layoutX="224.0" layoutY="22.0" prefHeight="53.0" prefWidth="154.0" style="-fx-background-color: Orange; -fx-background-radius: 10;">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nhân viên" wrappingWidth="188.23828125">
+               <font>
+                  <Font name="Arial Bold" size="37.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets bottom="5.0" left="7.0" right="7.0" top="5.0" />
+               </StackPane.margin>
+            </Text>
+         </children>
+      </StackPane>
+      <AnchorPane layoutX="15.0" layoutY="101.0" prefHeight="495.0" prefWidth="446.0" style="-fx-background-color: Orange;">
+         <children>
+            <VBox layoutX="153.0" layoutY="13.0" prefHeight="91.0" prefWidth="270.0" spacing="25.0">
+               <children>
+                  <JFXTextField fx:id="txtMaNhanVien" alignment="CENTER" editable="false" prefWidth="200.0" styleClass="textSearch-fieldInfor" unFocusColor="BLACK">
+                     <focusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="RED" />
+                              <Stop color="BLACK" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </focusColor>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtTenNhanVien" alignment="CENTER" prefWidth="200.0" styleClass="textSearch-fieldInfor" unFocusColor="BLACK">
+                     <focusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="RED" />
+                              <Stop color="BLACK" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </focusColor>
+                  </JFXTextField>
+               </children>
+            </VBox>
+            <HBox layoutX="61.0" layoutY="415.0" spacing="10.0" />
+            <VBox layoutX="21.0" layoutY="17.0" spacing="40.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mã nhân viên">
+                     <font>
+                        <Font name="Arrows2" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tên nhân viên">
+                     <font>
+                        <Font name="Arrows2" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày sinh">
+                     <font>
+                        <Font name="Arrows2" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Giới tính">
+                     <font>
+                        <Font name="Arrows2" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Đia chỉ">
+                     <font>
+                        <Font name="Arrows2" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Số điện thoại">
+                     <font>
+                        <Font name="Arrows2" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+            </VBox>
+            <HBox layoutX="177.0" layoutY="422.0" spacing="5.0">
+               <children>
+                  <JFXButton contentDisplay="RIGHT" onAction="#clearTextAction" prefHeight="34.0" prefWidth="107.0" ripplerFill="#ffe100" style="-fx-border-color: black; -fx-border-radius: 50; -fx-background-radius: 50;" styleClass="jfx-buttondashBoard" text="Làm mới">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Home/icons8_clear_formatting_96px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" onAction="#capNhat" prefHeight="35.0" prefWidth="125.0" style="-fx-background-color: Black; -fx-background-radius: 50;" styleClass="jfx-buttonSearch" text="Cập nhật" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Home/icons8_update_tag_filled_80px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <JFXTextArea fx:id="txtDiaChi" layoutX="152.0" layoutY="245.0" prefHeight="69.0" prefWidth="270.0" styleClass="textSearch-fieldInfor" unFocusColor="BLACK">
+               <focusColor>
+                  <LinearGradient endX="0.6523809523809524" endY="0.5714285714285714">
+                     <stops>
+                        <Stop color="RED" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </focusColor>
+            </JFXTextArea>
+            <JFXTextField fx:id="txtSoDienThoai" alignment="CENTER" layoutX="153.0" layoutY="350.0" prefHeight="25.0" prefWidth="270.0" styleClass="textSearch-fieldInfor" unFocusColor="BLACK">
+               <focusColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="RED" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </focusColor>
+            </JFXTextField>
+            <HBox layoutX="195.0" layoutY="186.0" prefHeight="36.0" prefWidth="227.0" spacing="5.0">
+               <children>
+                  <JFXRadioButton fx:id="radNam" text="Nam">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="gender" />
+                     </toggleGroup>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </JFXRadioButton>
+                  <FontAwesomeIconView fill="#1500ff" glyphName="MALE" size="30">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <JFXRadioButton fx:id="radNu" text="Nữ" toggleGroup="$gender">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </JFXRadioButton>
+                  <FontAwesomeIconView fill="#ff0044" glyphName="FEMALE" size="30">
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+               </children>
+            </HBox>
+            <JFXDatePicker fx:id="pickNgaySinh" editable="false" layoutX="196.0" layoutY="127.0" prefHeight="29.0" prefWidth="227.0" showWeekNumbers="true" styleClass="textSearch-fieldInfor">
+               <defaultColor>
+                  <LinearGradient endX="0.8714285714285713" endY="0.6476190476190476">
+                     <stops>
+                        <Stop color="RED" />
+                        <Stop color="RED" offset="0.007662835249042145" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </defaultColor>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXDatePicker>
+         </children>
+      </AnchorPane>
+      <FontAwesomeIconView fill="RED" glyphName="CLOSE" layoutX="433.0" layoutY="39.0" onMouseClicked="#closeDialog" size="100">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <ImageView fitHeight="199.0" fitWidth="261.0" layoutX="-80.0" layoutY="478.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/Home/green8.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="49.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cập nhật">
+         <font>
+            <Font name="Arial Bold" size="37.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+   </children>
+   <effect>
+      <DropShadow color="#00b0e1" height="5.0" radius="2.0" spread="0.79" width="5.0" />
+   </effect>
+</AnchorPane>

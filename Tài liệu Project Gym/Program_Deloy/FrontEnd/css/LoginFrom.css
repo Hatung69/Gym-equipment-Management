@@ -1,0 +1,35 @@
+/*Label Tắt và Ẩn window*/
+.close-btn:hover{
+	-fx-background-color: rgb(255.0,128.0,64.0,0.7)
+}
+.minus-btn:hover{
+	-fx-background-color: rgb(255.0,128.0,128.0,0.5)
+}
+/*Text field của Password và User */
+.jfx-text-field, .jfx-password-field {
+    -fx-prompt-text-fill: White;
+    -fx-text-inner-color: Gold;
+    -fx-font-size: 15.0;
+}
+/*Hyperlink*/
+.hyperlink-btn:pressed{
+	-fx-scale-y: 0.95;
+      -fx-scale-x: 0.95;
+       -fx-text-fill: White;
+}
+
+/*Button */
+.jfx-button {
+	-fx-background-radius: 10.0;
+     -fx-background-color: Black;
+     -fx-text-fill: white;
+}
+.jfx-button:hover {
+	  -fx-text-fill: Orange;
+}
+.jfx-button:pressed{
+	-fx-scale-y: 0.95;
+      -fx-scale-x: 0.95;
+        -fx-text-fill: White;
+	-fx-background-radius: 10.0;
+}

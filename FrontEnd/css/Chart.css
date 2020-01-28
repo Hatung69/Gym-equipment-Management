@@ -1,0 +1,16 @@
+.chart-pie-label-line {
+	 -fx-fill: Orange;
+}
+
+.chart-pie-label { /*this is what you need for labels*/
+    -fx-fill: White;
+    -fx-fill-width: Bold
+} 
+.chart-legend {
+	
+}
+.chart-title {
+	 -fx-text-fill: Orange;
+	 -fx-font-size: 30;
+	  -fx-fill-width: Bold;
+}

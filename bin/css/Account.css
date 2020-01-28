@@ -1,0 +1,67 @@
+/*Button dashBoard*/
+.jfx-buttondashBoard {
+	-fx-background-radius: 50.0;
+	-fx-border-color: Gold;
+	-fx-border-radius: 50.0;
+     -fx-background-color: Black;
+     -fx-text-fill: Orange;
+}
+.jfx-buttondashBoard:hover {
+	  -fx-text-fill: White;
+	  -fx-scale-y: 1.025;
+      -fx-scale-x: 1.025;
+}
+.jfx-buttondashBoard:pressed{
+	-fx-scale-y: 1.0;
+      -fx-scale-x: 1.0;
+        -fx-text-fill: Gold;
+	-fx-background-radius: 50.0;
+}
+/*Button quanly*/
+.jfx-btnQuanly {
+	-fx-background-radius: 50.0;
+	-fx-border-color: Black;
+	-fx-border-radius: 50.0;
+     -fx-background-color: Orange;
+     -fx-text-fill: Black;
+}
+.jfx-btnQuanly:hover {
+	  -fx-text-fill: rgb(210.0,210.0,210.0) ;
+	  -fx-scale-y: 1.025;
+      -fx-scale-x: 1.025;
+}
+.jfx-btnQuanly:pressed{
+	-fx-scale-y: 1.0;
+      -fx-scale-x: 1.0;
+        -fx-text-fill: Black;
+	-fx-background-radius: 50.0;
+}
+/*Button quanly2*/
+.jfx-btnQuanly2 {
+}
+.jfx-btnQuanly2:hover {
+	
+	  -fx-scale-y: 1.025;
+      -fx-scale-x: 1.025;
+}
+.jfx-btnQuanly2:pressed{
+	-fx-scale-y: 1.0;
+      -fx-scale-x: 1.0;
+}
+
+/* JFX TextFiledUpd */
+.textSearch-fieldUpd{
+	-fx-background-color: linear-gradient(to right, #ffa50a, #ff9e05, #ff9802, #ff9100, #ff8a00, #ff8a00, #ff8a00, #ff8a00, #ff9100, #ff9802, #ff9e05, #ffa50a);
+    -fx-text-inner-color: DarkRed;
+    -fx-prompt-text-fill: White;
+    -fx-font-size: 15.0;
+    -fx-font-weight: Bold;
+    }
+/* JFX TextFiledInfor */
+.textSearch-fieldInfor{
+	-fx-background-color: linear-gradient(to right, #ffa50a, #ff9e05, #ff9802, #ff9100, #ff8a00, #ff8a00, #ff8a00, #ff8a00, #ff9100, #ff9802, #ff9e05, #ffa50a);
+    -fx-text-inner-color: Black;
+    -fx-prompt-text-fill: White;
+    -fx-font-size: 15.0;
+    -fx-font-weight: Bold;
+    }

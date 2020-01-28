@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="566.0" prefWidth="427.0" style="-fx-background-color: orange; -fx-background-radius: 10;" stylesheets="@../../css/LoginFrom.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllerFXML.login.LoginController">
+	<children>
+		<ImageView fx:id="imageLogo" fitHeight="249.0" fitWidth="226.0" layoutX="82.0" layoutY="-104.0" onMouseDragged="#dragged" onMousePressed="#pressed" onMouseReleased="#resetOpacity" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../../Images/LogoMain.png" />
+			</image>
+		</ImageView>
+		<AnchorPane layoutX="35.0" layoutY="224.0" prefHeight="252.0" prefWidth="358.0" style="-fx-background-color: black; -fx-background-radius: 10;">
+			<effect>
+				<DropShadow radius="7.25" width="10.0" />
+			</effect>
+			<children>
+            <ImageView fitHeight="66.0" fitWidth="114.0" layoutX="4.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+               <image>
+                  <Image url="@../../Images/Home/green1.png" />
+               </image>
+            </ImageView>
+				<ImageView fitHeight="47.0" fitWidth="59.0" layoutX="22.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../../Images/Login/icons8_person_male_96px.png" />
+					</image>
+				</ImageView>
+				<JFXTextField fx:id="txtUser" focusColor="WHITE" labelFloat="true" layoutX="78.0" layoutY="79.0" prefHeight="31.0" prefWidth="265.0" promptText="Nhập tên tài khoản hoặc Gmail" styleClass="jfx-text-field" text="Admin1" unFocusColor="ORANGE" />
+				<Text fill="GOLD" layoutX="16.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tài khoản">
+					<font>
+						<Font name="System Bold" size="14.0" />
+					</font>
+				</Text>
+				<Text fill="GOLD" layoutX="15.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mật khẩu">
+					<font>
+						<Font name="System Bold" size="14.0" />
+					</font>
+				</Text>
+				<JFXCheckBox fx:id="checkBox" checkedColor="ORANGERED" focusTraversable="false" layoutX="241.0" layoutY="167.0" text="Hiện mật khẩu" textFill="GOLD" unCheckedColor="WHITE" />
+				<Hyperlink fx:id="hyperLink" focusTraversable="false" layoutX="217.0" layoutY="210.0" onAction="#switchForgotForm" styleClass="hyperlink-btn" text="Vào đây !" textFill="#ff7300" underline="true" visited="true">
+					<font>
+						<Font name="System Bold Italic" size="14.0" />
+					</font>
+				</Hyperlink>
+				<StackPane layoutX="79.0" layoutY="161.0">
+					<children>
+						<JFXPasswordField fx:id="txtPassword" focusColor="WHITE" labelFloat="true" prefHeight="25.0" prefWidth="150.0" promptText="Nhập mật khẩu" text="123" unFocusColor="ORANGE" />
+						<JFXTextField fx:id="txtPasswordShow" focusColor="WHITE" focusTraversable="false" labelFloat="true" prefHeight="25.0" prefWidth="150.0" promptText="Nhập mật khẩu" styleClass="jfx-text-field" unFocusColor="ORANGE" visible="false" />
+					</children>
+				</StackPane>
+				<Text fill="GOLD" layoutX="93.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bạn quên mật khẩu?">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</Text>
+				<ImageView fitHeight="40.0" fitWidth="47.0" layoutX="27.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../../Images/Login/icons8_password1_96px.png" />
+					</image>
+				</ImageView>
+			</children>
+		</AnchorPane>
+		<JFXButton fx:id="btnLogin" contentDisplay="RIGHT" defaultButton="true" layoutX="100.0" layoutY="489.0" onAction="#loginAction" prefHeight="57.0" prefWidth="228.0" ripplerFill="#000000ba" styleClass="jfx-button" text="Đăng nhập " textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="20.0" />
+			</font>
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+			<graphic>
+				<FontAwesomeIconView fill="ORANGE" glyphName="HAND_POINTER_ALT" size="25" />
+			</graphic>
+		</JFXButton>
+		<Text fx:id="txtBanner" fontSmoothingType="LCD" layoutX="5.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Đăng nhập để sử dụng chương trình .&#10;&#9;&#9;&#9;&#9; Xin cảm ơn !" wrappingWidth="393.12353515625">
+			<font>
+				<Font name="Consolas Bold" size="15.0" />
+			</font>
+         <effect>
+            <DropShadow height="5.0" radius="2.0" spread="0.84" width="5.0" />
+         </effect>
+         <fill>
+            <RadialGradient centerX="0.7166666666666667" centerY="0.7523809523809523" radius="0.5">
+               <stops>
+                  <Stop color="#e1e1e1" />
+                  <Stop color="#e1e1e1" offset="0.6130268199233716" />
+                  <Stop color="#ff003d" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+		</Text>
+		<Label fx:id="exit" alignment="CENTER" focusTraversable="false" layoutX="393.0" layoutY="3.0" onMouseClicked="#exitAction" prefHeight="26.0" prefWidth="28.0" style="-fx-background-radius: 20;" styleClass="close-btn">
+			<graphic>
+				<FontAwesomeIconView fill="RED" glyphName="CLOSE" size="25" styleClass="close-btn">
+               <effect>
+                  <DropShadow color="#141414" height="5.0" radius="2.0" spread="0.8" width="5.0" />
+               </effect></FontAwesomeIconView>
+			</graphic>
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+		</Label>
+		<Label fx:id="minus" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="358.0" layoutY="3.0" onMouseClicked="#minusAction" prefHeight="26.0" prefWidth="28.0" style="-fx-background-radius: 20;" styleClass="minus-btn">
+			<graphic>
+				<FontAwesomeIconView glyphName="MINUS" size="25" styleClass="minus-btn" text="">
+               <effect>
+                  <DropShadow color="WHITE" height="5.0" radius="2.0" spread="0.8" width="5.0" />
+               </effect></FontAwesomeIconView>
+			</graphic>
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+		</Label>
+      <ImageView fx:id="imageLoading" fitHeight="40.0" fitWidth="47.0" layoutX="106.0" layoutY="497.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../Images/Home/loading.gif" />
+         </image>
+      </ImageView>
+		<StackPane layoutX="93.0" layoutY="184.978515625" style="-fx-background-color: orange; -fx-background-radius: 10;">
+			<children>
+				<Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Đăng nhập" textAlignment="CENTER" wrappingWidth="228.40625">
+					<font>
+						<Font name="System Bold" size="42.0" />
+					</font>
+					<StackPane.margin>
+						<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+					</StackPane.margin>
+					<effect>
+						<DropShadow height="5.0" radius="2.0" spread="0.88" width="5.0" />
+					</effect>
+				</Text>
+			</children>
+		</StackPane>
+	</children>
+	<effect>
+		<DropShadow />
+	</effect>
+</AnchorPane>

@@ -1,0 +1,11 @@
+.jfx-list-cell:selected{
+	-fx-background-color: Orange;
+}
+.jfx-list-cell:hover{
+	-fx-background-color:Gold;
+}
+.jfx-list-view{
+	-fx-background-insets: 0.0
+}
+
+

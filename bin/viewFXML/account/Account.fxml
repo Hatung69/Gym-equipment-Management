@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="707.0" prefWidth="1198.0" style="-fx-background-color: Orange; -fx-background-radius: 5;" stylesheets="@../../css/Account.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllerFXML.account.AccountController">
+   <children>
+      <ImageView fitHeight="97.0" fitWidth="99.0" layoutX="1100.0" layoutY="609.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@../../Images/Home/green3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="224.0" fitWidth="172.0" layoutX="1026.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+         <image>
+            <Image url="@../../Images/Home/green5.png" />
+         </image>
+      </ImageView>
+      <FontAwesomeIconView fill="ORANGE" glyphName="PLAY" layoutX="-15.0" layoutY="472.0" rotate="180.0" size="20" />
+      <AnchorPane layoutX="450.0" layoutY="9.0">
+         <children>
+            <AnchorPane layoutY="45.0" prefHeight="282.0" prefWidth="739.0" style="-fx-border-color: Black; -fx-background-radius: 10; -fx-border-radius: 10;">
+               <children>
+                  <TableView fx:id="tableNhanVien" layoutX="15.0" layoutY="25.0" onMouseClicked="#clickGetItemNV" prefHeight="192.0" prefWidth="710.0" style="-fx-border-color: Black;" stylesheets="@../../css/TableView.css" tableMenuButtonVisible="true">
+                     <columns>
+                        <TableColumn fx:id="colMaNhanVien" prefWidth="75.0" text="Mã nhân viên" />
+                        <TableColumn fx:id="colTenNhanVien" prefWidth="75.0" text="Tên nhân viên" />
+                        <TableColumn fx:id="colNgaySinh" prefWidth="75.0" text="Ngày Sinh" />
+                        <TableColumn fx:id="colGioiTinh" prefWidth="75.0" text="Giới tính" />
+                        <TableColumn fx:id="colDiaChi" prefWidth="75.0" text="Địa chỉ" />
+                        <TableColumn fx:id="colSDT" prefWidth="75.0" text="Số điện thoại" />
+                        <TableColumn fx:id="colMaQuyen" prefWidth="75.0" text="Mã quyền" visible="false" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </TableView>
+                  <Label alignment="CENTER" layoutX="244.0" layoutY="-25.0" prefHeight="40.0" prefWidth="215.0" style="-fx-background-color: Black; -fx-background-radius: 10;" text="Quản lý nhân viên" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="121.0" layoutY="233.0" spacing="20.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" contentDisplay="RIGHT" onAction="#themMoiNhanVien" prefHeight="35.0" prefWidth="111.0" ripplerFill="#ff5700" style="-fx-border-color: black; -fx-border-radius: 50; -fx-background-radius: 50;" styleClass="jfx-btnQuanly" text="Thêm mới">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/Home/icons8_add_to_clipboard_80px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" contentDisplay="RIGHT" onAction="#xoaBoNhanVien" prefHeight="34.0" prefWidth="107.0" ripplerFill="#ff5700" style="-fx-text-fill: Red;" styleClass="jfx-btnQuanly" text="Xóa bỏ">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/Home/icons8_filled_trash_96px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" contentDisplay="RIGHT" onAction="#chinhSuaNhanVien" prefHeight="37.0" prefWidth="118.0" ripplerFill="#ff5700" styleClass="jfx-btnQuanly" text="Chỉnh sửa" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/Home/icons8_pencil_tip_96px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" contentDisplay="RIGHT" onAction="#thongTinNhanVien" prefHeight="35.0" prefWidth="111.0" ripplerFill="#ff5700" style="-fx-border-color: black; -fx-border-radius: 50; -fx-background-radius: 50;" styleClass="jfx-btnQuanly" text="Thông tin">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/Home/icons8_about_96px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="382.0" prefHeight="282.0" prefWidth="739.0" style="-fx-border-color: Black; -fx-background-radius: 10; -fx-border-radius: 10;">
+               <children>
+                  <TableView fx:id="tableTaiKhoan" layoutX="15.0" layoutY="25.0" onMouseClicked="#clickGetItemTK" prefHeight="192.0" prefWidth="710.0" style="-fx-border-color: Black;" stylesheets="@../../css/TableView.css" tableMenuButtonVisible="true">
+                     <columns>
+                        <TableColumn fx:id="colTenTaiKhoan" prefWidth="75.0" text="Tên tài khoản" />
+                        <TableColumn fx:id="colGmail" prefWidth="75.0" text="Gmail" />
+                        <TableColumn fx:id="colMaNhanVienTK" prefWidth="75.0" text="Mã nhân viên" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </TableView>
+                  <Label alignment="CENTER" layoutX="208.0" layoutY="-25.0" prefHeight="40.0" prefWidth="295.0" style="-fx-background-color: Black; -fx-background-radius: 10;" text="Quản lý tài khoản Nhân viên" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="174.0" layoutY="233.0" spacing="20.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" contentDisplay="RIGHT" onAction="#themMoiTaiKhoan" prefHeight="35.0" prefWidth="142.0" ripplerFill="#ff5700" style="-fx-border-color: black; -fx-border-radius: 50; -fx-background-radius: 50;" styleClass="jfx-btnQuanly" text="Tạo tài khoản">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/Home/icons8_add_to_clipboard_80px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" contentDisplay="RIGHT" onAction="#xoaBoTaiKhoan" prefHeight="34.0" prefWidth="107.0" ripplerFill="#ff5700" style="-fx-text-fill: Red;" styleClass="jfx-btnQuanly" text="Xóa bỏ">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/Home/icons8_filled_trash_96px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" contentDisplay="RIGHT" onAction="#chinhSuaTaiKhoan" prefHeight="37.0" prefWidth="118.0" ripplerFill="#ff5700" styleClass="jfx-btnQuanly" text="Chỉnh sửa" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/Home/icons8_pencil_tip_96px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="imageCheQuanLy" fitHeight="707.0" fitWidth="828.0" layoutX="370.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../Images/Account/gym_5.png" />
+         </image>
+      </ImageView>
+      <StackPane layoutX="47.0" layoutY="105.0">
+         <children>
+            <AnchorPane fx:id="paneInfor" prefHeight="451.0" prefWidth="346.0">
+               <children>
+                  <Rectangle arcHeight="20.0" arcWidth="20.0" height="420.0" layoutY="31.0" stroke="BLACK" strokeType="INSIDE" width="328.0" />
+                  <VBox layoutX="75.0" layoutY="79.0" prefHeight="274.0" prefWidth="225.0" spacing="30.0">
+                     <children>
+                        <JFXTextField fx:id="txtTenTaiKhoan" editable="false" focusColor="WHITE" labelFloat="true" promptText="Tên tài khoản" styleClass="textSearch-fieldInfor" unFocusColor="#a40000" />
+                        <JFXPasswordField fx:id="txtMatKhau" editable="false" focusColor="WHITE" labelFloat="true" promptText="Mật khẩu" styleClass="textSearch-fieldInfor" unFocusColor="#a40000" />
+                        <JFXTextField fx:id="txtGmail" editable="false" focusColor="WHITE" labelFloat="true" promptText="Gmail" styleClass="textSearch-fieldInfor" unFocusColor="#a40000" />
+                        <JFXTextField fx:id="txtMaNhanVien" editable="false" focusColor="WHITE" labelFloat="true" promptText="Mã Nhân viên" styleClass="textSearch-fieldInfor" unFocusColor="#a40000" />
+                        <JFXTextField fx:id="txtQuyenHan" editable="false" focusColor="WHITE" labelFloat="true" promptText="Mã quyền hạn" styleClass="textSearch-fieldInfor" unFocusColor="#a40000" />
+                     </children>
+                  </VBox>
+                  <Label alignment="CENTER" layoutX="60.0" layoutY="4.0" prefHeight="40.0" prefWidth="215.0" style="-fx-background-color: Orange; -fx-background-radius: 10;" text="Thông tin tài khoản">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="11.0" radius="5.0" spread="1.0" width="11.0" />
+                     </effect>
+                  </Label>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="127.0" layoutY="388.0" onAction="#chinhSuaAction" prefHeight="37.0" prefWidth="118.0" styleClass="jfx-buttondashBoard" text="Chỉnh sửa" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Home/icons8_edit_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <VBox layoutX="21.0" layoutY="72.0" spacing="22.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Account/icons8_user_48px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Account/icons8_password_48px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Account/icons8_gmail_48px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Account/icons8_identity_theft_48px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Account/icons8_electronic_identity_card_48px.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="151.0" fitWidth="138.0" layoutX="-45.0" layoutY="378.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/Account/la.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="224.0" fitWidth="110.0" layoutX="261.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/Account/la3.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="paneChinhSua" prefHeight="451.0" prefWidth="346.0" visible="false">
+               <children>
+                  <Rectangle arcHeight="20.0" arcWidth="20.0" height="420.0" layoutY="31.0" stroke="BLACK" strokeType="INSIDE" width="328.0" />
+                  <VBox layoutX="75.0" layoutY="79.0" prefHeight="274.0" prefWidth="225.0" spacing="30.0">
+                     <children>
+                        <JFXTextField fx:id="txtUpdTenTaiKhoan" focusColor="WHITE" labelFloat="true" promptText="Tên tài khoản" styleClass="textSearch-fieldUpd" unFocusColor="#fff300" />
+                        <HBox spacing="10.0">
+                           <children>
+                              <StackPane>
+                                 <children>
+                                    <JFXPasswordField fx:id="txtUpdPassword" focusColor="WHITE" labelFloat="true" prefHeight="25.0" prefWidth="175.0" promptText="Mật khẩu" styleClass="textSearch-fieldUpd" unFocusColor="ORANGE" />
+                                    <JFXTextField fx:id="txtUpdPasswordShow" focusColor="WHITE" focusTraversable="false" labelFloat="true" prefHeight="25.0" prefWidth="175.0" promptText="Mật khẩu" styleClass="textSearch-fieldUpd" unFocusColor="ORANGE" visible="false" />
+                                 </children>
+                              </StackPane>
+                              <JFXCheckBox fx:id="checkBox" checkedColor="ORANGERED" focusTraversable="false" text="Show" textFill="#ffd400" unCheckedColor="WHITE">
+                                 <HBox.margin>
+                                    <Insets top="6.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXCheckBox>
+                           </children>
+                        </HBox>
+                        <JFXTextField fx:id="txtUpdGmail" focusColor="WHITE" labelFloat="true" promptText="Gmail" styleClass="textSearch-fieldUpd" unFocusColor="#fff300" />
+                        <JFXTextField fx:id="txtUpdMaNhanVien" editable="false" focusColor="WHITE" labelFloat="true" promptText="Mã Nhân viên" styleClass="textSearch-fieldUpd" unFocusColor="#fff300" />
+                        <JFXTextField fx:id="txtUpdMaQuyenHan" editable="false" focusColor="WHITE" labelFloat="true" promptText="Mã quyền hạn" styleClass="textSearch-fieldUpd" unFocusColor="#fff300" />
+                     </children>
+                  </VBox>
+                  <Label alignment="CENTER" layoutX="60.0" layoutY="4.0" prefHeight="40.0" prefWidth="215.0" style="-fx-background-color: Orange; -fx-background-radius: 10;" text="Chỉnh sửa thông tin">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="11.0" radius="5.0" spread="1.0" width="11.0" />
+                     </effect>
+                  </Label>
+                  <HBox layoutX="97.0" layoutY="385.0" spacing="10.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" contentDisplay="RIGHT" onAction="#huy" prefHeight="37.0" prefWidth="78.0" styleClass="jfx-buttondashBoard" text="Hủy" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/Home/icons8_close_window_filled_50px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" contentDisplay="RIGHT" onAction="#hoanTatChinhSua" prefHeight="37.0" prefWidth="118.0" style="-fx-border-color: Red;" styleClass="jfx-buttondashBoard" text="Hoàn tất" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/Home/icons8_checked_filled_50px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <VBox layoutX="21.0" layoutY="72.0" spacing="22.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Account/icons8_user_48px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Account/icons8_password_48px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Account/icons8_gmail_48px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Account/icons8_identity_theft_48px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Account/icons8_electronic_identity_card_48px.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="151.0" fitWidth="138.0" layoutX="-45.0" layoutY="378.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/Account/la.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="224.0" fitWidth="110.0" layoutX="261.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/Account/la3.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <StackPane fx:id="panBtnQuanLy" layoutX="136.0" layoutY="582.0">
+         <children>
+            <JFXButton contentDisplay="BOTTOM" focusTraversable="false" onAction="#openQuanLyNhanVien" prefHeight="40.0" prefWidth="172.0" ripplerFill="#fbff00" style="-fx-background-color: Black; -fx-background-radius: 10;" styleClass="jfx-btnQuanly2" text="Quản lý nhân viên" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow spread="0.64" />
+               </effect>
+               <graphic>
+                  <FontAwesomeIconView fill="ORANGE" glyphName="USERS" size="25" />
+               </graphic>
+            </JFXButton>
+         </children>
+         <effect>
+            <DropShadow color="#c60038" height="5.0" radius="2.0" spread="1.0" width="5.0" />
+         </effect>
+      </StackPane>
+      <ImageView fitHeight="114.0" fitWidth="183.0" layoutY="593.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/Account/la2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="282.0" fitWidth="283.0" layoutX="97.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/Account/banner.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="107.0" fitWidth="185.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/Account/green1.png" />
+         </image>
+      </ImageView>
+      <StackPane layoutX="106.0" layoutY="57.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="29.0" prefWidth="215.0">
+         <children>
+            <Text fx:id="textUserName" strokeType="OUTSIDE" strokeWidth="0.0" text="UserName">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.5761904761904761" startY="0.380952380952381">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="BLACK" offset="0.007662835249042145" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

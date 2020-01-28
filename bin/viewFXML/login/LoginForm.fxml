@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="stackDialog" prefHeight="699.0" prefWidth="1022.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 50; -fx-border-radius: 50;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllerFXML.login.LoginFormController">
+	<children>
+		<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="975.0" style="-fx-background-color: TRANSPARENT;">
+			<children>
+				<AnchorPane layoutX="12.0" layoutY="139.0" prefHeight="489.0" prefWidth="954.0" style="-fx-background-color: black; -fx-background-radius: 5;">
+					<effect>
+						<DropShadow />
+					</effect>
+				</AnchorPane>
+				<ImageView fx:id="imageLogo2" fitHeight="697.0" fitWidth="415.0" layoutX="513.0" layoutY="2.0" pickOnBounds="true" visible="false">
+					<image>
+						<Image url="@../../Images/Login/ImageLogIn2.png" />
+					</image>
+					<effect>
+						<DropShadow />
+					</effect>
+				</ImageView>
+				<ImageView fx:id="imageLogo1" fitHeight="697.0" fitWidth="415.0" layoutX="39.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../../Images/Login/ImageLogin.png" />
+					</image>
+					<effect>
+						<DropShadow />
+					</effect>
+				</ImageView>
+				<StackPane fx:id="stackPane" layoutX="494.0" layoutY="101.0" prefHeight="566.0" prefWidth="427.0" />
+			</children>
+		</AnchorPane>
+	</children>
+</StackPane>
