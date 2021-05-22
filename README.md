@@ -20,10 +20,11 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/48283189/119209615-e3efb200-bad1-11eb-9028-b7992fc6da17.png" alt="Synthwave" height="300" width="500"></p>
 <p align="center"><img src="https://user-images.githubusercontent.com/48283189/119209601-c3bff300-bad1-11eb-85f4-0560b8e8f152.png" alt="Synthwave" height="300" width="500"></p>
 
-<h2>Tôi là Tùng! <img src="https://i.pinimg.com/originals/37/8a/ce/378ace07e6b46acc3fbf818c8a876761.gif" width="50"></h2>
+<h2>Tôi là Tùng! <img src="https://i.pinimg.com/originals/37/32/ee/3732eedebb5492e7637e16c558d82275.gif" width="50"></h2>
 <img align='right' src="https://media.giphy.com/media/ieyl9zmCjO4b4t6qoY/giphy.gif" width="230">
-<p><em>Học tại <a href="http://www.unb.br">Đại học Kỹ Thuật - Công Nghệ Cần Thơ><img src="https://media.giphy.com/media/fYSnHlufseco8Fh93Z/giphy.gif" width="30"></br>Chyên nghành Kỹ thuật phần mềm!
+<p><em>Học tại <a href="https://ctuet.edu.vn">Đại học Kỹ Thuật - Công Nghệ Cần Thơ <img src="https://media.giphy.com/media/fYSnHlufseco8Fh93Z/giphy.gif" width="30"></br>
 </em></p>
+<p>Chyên nghành Kỹ thuật phần mềm!</p>
 <h2 align="center">Liên lạc với tôi tại:</h2>
 <p align="center">
   <a href="https://www.facebook.com/profile.php?id=100025155662578">
