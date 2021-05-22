@@ -14,4 +14,4 @@
 
 ### 1 vài hình ảnh 🌱
 
-<p align="center"><img src="https://thumbs.gfycat.com/GoodnaturedFondGaur-size_restricted.gif" alt="Synthwave" height="300" width="500"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/48283189/119209578-8b201980-bad1-11eb-860c-0b3c745623ef.png" alt="Synthwave" height="300" width="500"></p>
